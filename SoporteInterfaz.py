@@ -69,8 +69,8 @@ def altaRobot(robots):
     camaras = []
     qCamaras = 0
     #Inputo de datos   
-    tipos = [s for s in Robot.__subclasses__()] 
-    menu = sorted([s.__name__ for s in tipos], key= lambda s: s)
+    tipos = sorted([s for s in Robot.__subclasses__()], key = lambda s: s.__name__)
+    menu = [s.__name__ for s in tipos]
     opcionSalida = "Cancelar alta"
     textoInput = "Seleccione la opción según el tipo de robot que desea crear:"
     opt = generarPantalla("", menu, opcionSalida, textoInput)
